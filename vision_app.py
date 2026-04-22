@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 import cv2
 import mediapipe as mp
 import numpy as np
@@ -39,6 +40,15 @@ st.markdown("""
 
 @st.cache_resource
 def create_landmarker():
+    # Auto-download model for deployment if missing
+    if not os.path.exists(MODEL_PATH):
+        with st.spinner("Downloading Neural Engine (Pose Landmarker)..."):
+            url = "https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_heavy/float16/1/pose_landmarker_heavy.task"
+            import requests
+            r = requests.get(url)
+            with open(MODEL_PATH, "wb") as f:
+                f.write(r.content)
+    
     try:
         base_options = python.BaseOptions(model_asset_path=MODEL_PATH)
         options = vision.PoseLandmarkerOptions(
