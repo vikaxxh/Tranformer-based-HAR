@@ -4,6 +4,7 @@ import cv2
 import mediapipe as mp
 import numpy as np
 import time
+import requests
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
