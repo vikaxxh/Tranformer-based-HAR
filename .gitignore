@@ -1,0 +1,23 @@
+# Virtual Environment
+venv/
+.env
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data & Large Models
+data/
+UCI HAR Dataset/
+*.zip
+*.task
+*.pth
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

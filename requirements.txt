@@ -1,0 +1,11 @@
+torch
+numpy
+pandas
+scikit-learn
+matplotlib
+requests
+tqdm
+streamlit
+mediapipe
+opencv-python
+plotly
