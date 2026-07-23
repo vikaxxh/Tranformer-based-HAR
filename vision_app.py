@@ -159,6 +159,14 @@ def main():
         show_skeleton = st.checkbox("SKELETON_OVERLAY", value=True)
         st.write("---")
         stop_button = st.button("TERMINATE_SYSTEM")
+        
+        st.write("---")
+        st.markdown("""
+            <div style='border: 1px solid #00f2ff; padding: 10px; border-radius: 5px; background: rgba(0, 242, 255, 0.1);'>
+                <p style='color: #00f2ff; font-family: "Courier New", Courier, monospace; font-size: 0.8rem; margin: 0;'>SYSTEM_STAMP: DEVELOPER</p>
+                <p style='color: white; font-family: "Courier New", Courier, monospace; font-size: 1rem; font-weight: bold; margin: 0;'>SN: 25212031117</p>
+            </div>
+        """, unsafe_allow_html=True)
 
     if use_webcam:
         landmarker = create_landmarker()

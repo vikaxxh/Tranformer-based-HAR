@@ -64,6 +64,12 @@ def main():
     sample_idx = st.sidebar.number_input("Sample Index", 0, len(X_test)-1, st.session_state.sample_idx)
     st.session_state.sample_idx = sample_idx
 
+    st.sidebar.divider()
+    st.sidebar.markdown(f"""
+        **Developer Info**  
+        Scholar Number: `25212031117`
+    """)
+
     # Get data
     sample = X_test[sample_idx]
     label = y_test[sample_idx]
